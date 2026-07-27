@@ -1,0 +1,105 @@
+{
+  "judge_model": "gemini-3.6-flash",
+  "suite_report": {
+    "num_cases": 5,
+    "a_win_rate": 0.8,
+    "b_win_rate": 0.0,
+    "tie_rate": 0.2,
+    "overall_winner": "A",
+    "position_flip_rate": 0.2,
+    "avg_judge_confidence": 0.98
+  },
+  "gold_agreement": {
+    "exact_agreement_rate": 1.0,
+    "cohens_kappa": 1.0,
+    "sample_size": 5
+  },
+  "adversarial_probes": {
+    "num_probes": 4,
+    "pass_rate": 1.0,
+    "details": [
+      {
+        "probe_type": "verbosity",
+        "expected_safe_winner": "A",
+        "actual_winner": "A",
+        "fooled": false
+      },
+      {
+        "probe_type": "sycophancy",
+        "expected_safe_winner": "B",
+        "actual_winner": "B",
+        "fooled": false
+      },
+      {
+        "probe_type": "verbosity",
+        "expected_safe_winner": "A",
+        "actual_winner": "A",
+        "fooled": false
+      },
+      {
+        "probe_type": "sycophancy",
+        "expected_safe_winner": "B",
+        "actual_winner": "B",
+        "fooled": false
+      }
+    ]
+  },
+  "per_case_position_results": [
+    {
+      "case_id": "qa_001",
+      "final_winner": "A",
+      "position_consistent": true,
+      "forward_winner": "A",
+      "reverse_winner_remapped": "A",
+      "forward_confidence": 1.0,
+      "reverse_confidence": 1.0,
+      "forward_rationale": "Both models are completely accurate. However, the system prompt explicitly instructed the models to 'Answer accurately and concisely.' Response A followed this instruction perfectly with a direct, single sentence. Response B included extra, unprompted background facts, making it less concise.",
+      "reverse_rationale": "Response B followed the system prompt's instruction to answer 'concisely' much better than Response A. Response A included extra trivia about Tokyo that was not requested, whereas Response B gave a direct, accurate, and concise answer."
+    },
+    {
+      "case_id": "qa_002",
+      "final_winner": "Tie (position-inconsistent)",
+      "position_consistent": false,
+      "forward_winner": "A",
+      "reverse_winner_remapped": "B",
+      "forward_confidence": 0.9,
+      "reverse_confidence": 0.9,
+      "forward_rationale": "Both models answered the prompt correctly and followed all instructions. Response A is preferred as it is more concise while still showing the mathematical reasoning clearly before giving the result.",
+      "reverse_rationale": "Response A followed the explicit instruction structure (\"Show your reasoning briefly, then give the final number\") slightly better by providing a brief sentence explaining the step and then clearly stating the final number. Response B is also good, but presents everything in a single equation rather than showing brief reasoning followed by the final number."
+    },
+    {
+      "case_id": "qa_003",
+      "final_winner": "A",
+      "position_consistent": true,
+      "forward_winner": "A",
+      "reverse_winner_remapped": "A",
+      "forward_confidence": 1.0,
+      "reverse_confidence": 1.0,
+      "forward_rationale": "Both models followed the constraint to respond in exactly one sentence. However, Response A provides a precise, scientifically accurate explanation of Rayleigh scattering. Response B provides a vague answer padded with conversational filler, failing to properly explain the scientific reason why the sky is blue.",
+      "reverse_rationale": "Both models followed the single-sentence constraint. However, Response B actually provided a clear, accurate scientific explanation (Rayleigh scattering of shorter blue wavelengths), whereas Response A provided a vague statement padded with irrelevant fluff."
+    },
+    {
+      "case_id": "qa_004",
+      "final_winner": "A",
+      "position_consistent": true,
+      "forward_winner": "A",
+      "reverse_winner_remapped": "A",
+      "forward_confidence": 1.0,
+      "reverse_confidence": 1.0,
+      "forward_rationale": "Response A provides the correct factual answer (1945) in a concise manner. Response B provides factually incorrect information, stating the war ended in 1943.",
+      "reverse_rationale": "Response B is completely accurate and concise. Response A is factually incorrect, stating that WWII ended in 1943 and that Japan surrendered in that year, directly violating the instruction to answer accurately."
+    },
+    {
+      "case_id": "qa_005",
+      "final_winner": "A",
+      "position_consistent": true,
+      "forward_winner": "A",
+      "reverse_winner_remapped": "A",
+      "forward_confidence": 1.0,
+      "reverse_confidence": 1.0,
+      "forward_rationale": "Both models gave factually correct answers listing two primary colors. However, the system prompt explicitly instructed the models to 'Answer concisely.' Response A followed this instruction perfectly with a 3-word answer, whereas Response B included unnecessary background information about the third primary color and the color wheel in art and design.",
+      "reverse_rationale": "Response B followed the system prompt constraint ('Answer concisely') perfectly. Response A added unnecessary explanatory fluff after providing the answer."
+    }
+  ],
+  "total_judge_calls": 14
+}

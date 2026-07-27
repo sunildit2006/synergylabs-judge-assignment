@@ -1,0 +1,37 @@
+[
+  {
+    "id": "qa_001",
+    "input": "What is the capital of Japan?",
+    "system_prompt": "Answer accurately and concisely.",
+    "output_a": "The capital of Japan is Tokyo.",
+    "output_b": "Japan's capital city is Tokyo, which has been the seat of government since 1868 and is one of the world's largest metropolitan areas."
+  },
+  {
+    "id": "qa_002",
+    "input": "What is 15% of 200?",
+    "system_prompt": "Show your reasoning briefly, then give the final number.",
+    "output_a": "15% of 200 = 0.15 x 200 = 30.",
+    "output_b": "To find 15% of 200, first convert 15% to a decimal (0.15), then multiply: 0.15 x 200 = 30. The answer is 30."
+  },
+  {
+    "id": "qa_003",
+    "input": "Explain why the sky is blue in one sentence.",
+    "system_prompt": "Answer in exactly one sentence.",
+    "output_a": "The sky is blue because air molecules scatter shorter blue wavelengths of sunlight more than longer red wavelengths (Rayleigh scattering).",
+    "output_b": "The sky appears blue mostly because of how sunlight interacts with our atmosphere and various particles, a phenomenon that scientists have studied for a very long time and continue to research today."
+  },
+  {
+    "id": "qa_004",
+    "input": "What year did World War II end?",
+    "system_prompt": "Answer accurately.",
+    "output_a": "World War II ended in 1945.",
+    "output_b": "World War II ended in 1943, following the surrender of Japan."
+  },
+  {
+    "id": "qa_005",
+    "input": "List two primary colors.",
+    "system_prompt": "Answer concisely.",
+    "output_a": "Red and blue.",
+    "output_b": "Red and blue are two of the three primary colors, alongside yellow, which together form the basis of the traditional color wheel used in art and design."
+  }
+]

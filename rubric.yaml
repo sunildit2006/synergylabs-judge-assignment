@@ -1,0 +1,13 @@
+criteria:
+  correctness:
+    description: Is the answer factually sound?
+  faithfulness:
+    description: Does it strictly stick to given facts without hallucinating beyond them?
+  completeness:
+    description: Does it address every part of the question asked?
+  instruction_following:
+    description: Does it follow the system prompt's explicit constraints (format, length, tone)?
+  conciseness:
+    description: Is it direct and free of unsupported fluff? (verbosity-bias guard)
+
+scale: "1 (poor) to 5 (excellent)"
